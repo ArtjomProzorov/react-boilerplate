@@ -10,6 +10,11 @@ module.exports = {
     react: {
       version: "detect"
     },
+    'import/resolver': {
+      node: {
+        paths: ["src"]
+      }
+    },
   },
   env: {
     "browser": true,
