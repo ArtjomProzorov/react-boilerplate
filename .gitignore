@@ -12,3 +12,6 @@ build
 
 # Testing
 coverage
+
+# Version control
+yarn-error.log

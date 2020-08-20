@@ -6,15 +6,15 @@ module.exports = (env) => {
   const mode = env ? env.mode : 'development'
 
   const config = {
-    entry: './src/index.tsx',
+    entry: './src/index.js',
     devtool: 'source-map',
     resolve: {
-      extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      extensions: ['.js', '.jsx'],
     },
     module: {
       rules: [
         {
-          test: /\.(js|jsx|tsx|ts)$/,
+          test: /\.(js|jsx)$/,
           exclude: /node_modules/,
           use: {
             loader: 'babel-loader',
@@ -22,11 +22,9 @@ module.exports = (env) => {
               presets: [
                 '@babel/preset-env',
                 '@babel/preset-react',
-                '@babel/preset-typescript',
               ],
               plugins: [
                 "@babel/plugin-transform-runtime",
-                'babel-plugin-styled-components',
                 '@babel/plugin-proposal-class-properties',
                 '@babel/plugin-proposal-object-rest-spread',
               ],
@@ -44,16 +42,10 @@ module.exports = (env) => {
     output: {
       filename: '[name]/index.js',
     },
-    optimization: {
-      mangleWasmImports: true,
-      mergeDuplicateChunks: true,
-      minimize: true,
-      nodeEnv: 'production',
-    },
     plugins: [
       new HtmlWebpackPlugin({
         env: mode,
-        title: 'Pet Project',
+        title: 'React Project',
         filename: path.resolve(__dirname, 'dist/index.html'),
         template: path.resolve(__dirname, 'public', 'index.html'),
       }),

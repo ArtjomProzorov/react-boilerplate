@@ -1,11 +1,11 @@
-<h1>React TypeScript Boilerplate</h1>
+<h1>React Boilerplate</h1>
 This is a React boilerplate utilizing:
 
-* TypeScript
-* ESLint + airbnb-typescript config + a few custom opinionated rules
+* ESLint + airbnb config + a few custom opinionated rules
 * Prettier
-* Jest & Enzyme
+* Jest & Enzyme + @testing-library/react
 * Husky
+* PropTypes
 
 <h2>Guide</h2>
 <h5>Install dependencies</h5>
@@ -45,3 +45,6 @@ Runs all tests the script finds with coverage and runs lint
 This boilerplate uses Husky (https://github.com/typicode/husky) to run all tests and lint before every commit. This helps against missing some errors before committing your work.
 
 It can be bypassed using the `--no-verify` flag.
+
+<h2>TODO</h2>
+Separate webpack configs
