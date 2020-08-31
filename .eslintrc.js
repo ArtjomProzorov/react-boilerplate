@@ -3,12 +3,15 @@ module.exports = {
     ecmaVersion: 2020,
     sourceType: "module",
     ecmaFeatures: {
-      jsx: true
+      jsx: true,
     },
   },
   settings: {
     react: {
       version: "detect"
+    },
+    "import/resolver": {
+      "babel-module": {},
     },
   },
   env: {
@@ -25,12 +28,12 @@ module.exports = {
     {
       files: [
         "**/*.test.js",
-        "**/*.test.jsx"
+        "**/*.test.jsx",
       ],
       env: {
-        "jest": true
-      }
-    }
+        "jest": true,
+      },
+    },
   ],
   rules: {
     "semi": "off",
