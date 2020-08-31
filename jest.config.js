@@ -1,4 +1,4 @@
-{
+module.exports = {
   "roots": [
     "<rootDir>/src"
   ],
@@ -19,9 +19,5 @@
   ],
   "setupFilesAfterEnv": [
     "<rootDir>/setupEnzyme.js"
-  ],
-  "moduleNameMapper": {
-    "\\.(css|less|scss|sass)$": "identity-obj-proxy",
-    "@app/components": "<rootDir>/src/components"
-  }
+  ]
 }

@@ -2,7 +2,7 @@
 .eslintrc.js
 tsconfig.js
 webpack.config.js
-est.config.json
+jest.config.js
 
 # Distributable
 dist
