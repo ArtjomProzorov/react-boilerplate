@@ -8,7 +8,7 @@
     "build": "webpack --env.mode=production",
     "build:development": "webpack --env.mode=development",
     "test": "jest --coverage --passWithNoTests",
-    "lint": "eslint . --ext .js,.jsx",
+    "lint": "eslint . --ext .js,.jsx && stylelint **/*.css --allow-empty-input",
     "lint:fix": "eslint . --ext .js,.jsx --fix"
   },
   "keywords": [],
@@ -51,6 +51,8 @@
     "prettier": "^2.0.5",
     "prop-types": "^15.7.2",
     "source-map-loader": "^1.0.1",
+    "stylelint": "^13.7.0",
+    "stylelint-config-standard": "^20.0.0",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0",

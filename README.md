@@ -3,6 +3,7 @@ This is a React boilerplate utilizing:
 
 * ESLint + airbnb config + a few custom opinionated rules
 * Prettier
+* Stylelint
 * Jest & Enzyme + @testing-library/react
 * Husky
 * PropTypes
