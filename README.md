@@ -47,5 +47,12 @@ This boilerplate uses Husky (https://github.com/typicode/husky) to run all tests
 
 It can be bypassed using the `--no-verify` flag.
 
-<h2>TODO</h2>
-Add css and lint for it
+<h2>Module importing</h2>
+
+Path aliases can be added in `.babelrc`
+
+*Example*
+
+    "alias": {
+      "@app/components": "./src/components"
+    }
