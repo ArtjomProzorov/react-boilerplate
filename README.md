@@ -47,4 +47,4 @@ This boilerplate uses Husky (https://github.com/typicode/husky) to run all tests
 It can be bypassed using the `--no-verify` flag.
 
 <h2>TODO</h2>
-Separate webpack configs
+Add css and lint for it

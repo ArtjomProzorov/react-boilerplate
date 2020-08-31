@@ -1,49 +1,41 @@
 module.exports = {
   parserOptions: {
     ecmaVersion: 2020,
-    sourceType: "module",
+    sourceType: 'module',
     ecmaFeatures: {
       jsx: true,
     },
   },
   settings: {
     react: {
-      version: "detect"
+      version: 'detect',
     },
-    "import/resolver": {
-      "babel-module": {},
+    'import/resolver': {
+      'babel-module': {},
     },
   },
   env: {
-    "browser": true,
+    browser: true,
   },
-  extends: [
-    "plugin:react/recommended",
-    "plugin:prettier/recommended",
-    'eslint:recommended',
-    'airbnb',
-    'airbnb/hooks',
-  ],
+  extends: ['plugin:react/recommended', 'plugin:prettier/recommended', 'eslint:recommended', 'airbnb', 'airbnb/hooks'],
   overrides: [
     {
-      files: [
-        "**/*.test.js",
-        "**/*.test.jsx",
-      ],
+      files: ['**/*.test.js', '**/*.test.jsx'],
       env: {
-        "jest": true,
+        jest: true,
       },
     },
   ],
   rules: {
-    "semi": "off",
+    semi: 'off',
     'no-multiple-empty-lines': ['error', { max: 2 }],
     'react/jsx-one-expression-per-line': 'off',
-    'no-magic-numbers': ["error", { "ignore": [0, 1, -1, 2] }],
-    'arrow-body-style': ["error", "as-needed"],
+    'no-magic-numbers': ['error', { ignore: [0, 1, -1, 2] }],
+    'arrow-body-style': ['error', 'as-needed'],
 
-    "import/prefer-default-export": ["off"],
+    'import/prefer-default-export': ['off'],
     'import/newline-after-import': ['error', { count: 1 }],
-    "import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
+    'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
+    'object-curly-newline': 'off',
   },
-};
+}
