@@ -21,6 +21,7 @@
     "<rootDir>/setupEnzyme.js"
   ],
   "moduleNameMapper": {
-    "\\.(css|less|scss|sass)$": "identity-obj-proxy"
+    "\\.(css|less|scss|sass)$": "identity-obj-proxy",
+    "@app/components": "<rootDir>/src/components"
   }
 }

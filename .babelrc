@@ -1,7 +1,13 @@
 {
   "plugins": [
-    ["module-resolver", {
-      "root": ["./src"]
-    }]
+    [
+      "babel-plugin-module-resolver", {
+        "root": ["./src"],
+        "extensions": [".js", ".jsx"],
+        "alias": {
+          "@app/components": "./src/components"
+        }
+      }
+    ]
   ]
 }
