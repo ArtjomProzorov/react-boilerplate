@@ -20,15 +20,9 @@ This is a React boilerplate utilizing:
 Runs in development mode
 <h5>Build distributable</h5>
 
-*Production build*
-
     npm run build 
 
-*Development build*
-
-    npm run build:development
-    
-Will save the distributable into the `/dist` folder
+Saves the resulting production build to the `dist` folder located in the project root folder
 
 <h5>Run liner</h5>
 
