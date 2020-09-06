@@ -8,7 +8,7 @@
     "build": "webpack --env.mode=production",
     "test": "jest --coverage --passWithNoTests",
     "lint": "eslint . --ext .js,.jsx && stylelint **/*.css --allow-empty-input",
-    "lint:fix": "eslint . --ext .js,.jsx --fix"
+    "lint:fix": "eslint . --ext .js,.jsx --fix && stylelint **/*.css --fix"
   },
   "keywords": [],
   "author": "",
@@ -32,6 +32,7 @@
     "babel-loader": "^8.1.0",
     "babel-plugin-module-resolver": "^4.0.0",
     "cross-env": "^7.0.2",
+    "css-loader": "^4.2.2",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "enzyme-to-json": "^3.5.0",
@@ -50,6 +51,7 @@
     "prettier": "^2.0.5",
     "prop-types": "^15.7.2",
     "source-map-loader": "^1.0.1",
+    "style-loader": "^1.2.1",
     "stylelint": "^13.7.0",
     "stylelint-config-standard": "^20.0.0",
     "webpack": "^4.44.1",
