@@ -1,13 +1,9 @@
-module.exports = ({ contentBase, webpack, HtmlWebpackPlugin, filename, template }) => ({
+const path = require('path')
+
+const contentBase = path.resolve(__dirname, '../dist')
+
+module.exports = {
   mode: 'development',
-  plugins: [
-    new HtmlWebpackPlugin({
-      env: 'development',
-      filename,
-      template,
-    }),
-    new webpack.HotModuleReplacementPlugin(),
-  ],
   devServer: {
     contentBase,
     publicPath: '/',
@@ -22,10 +18,17 @@ module.exports = ({ contentBase, webpack, HtmlWebpackPlugin, filename, template 
       children: false,
       publicPath: false,
     },
+    proxy: [
+      {
+        context: ['/api'],
+        target: 'http://localhost:8080',
+        changeOrigin: true,
+      },
+    ],
   },
   optimization: {
     mergeDuplicateChunks: false,
     minimize: false,
     nodeEnv: 'development',
   },
-})
+}

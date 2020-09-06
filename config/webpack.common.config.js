@@ -1,13 +1,28 @@
+const path = require('path')
+const webpack = require('webpack')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+
+const filename = path.resolve(__dirname, '../dist/index.html')
+const template = path.resolve(__dirname, '../public', 'index.html')
+
 module.exports = {
   entry: './src/index.js',
   devtool: 'source-map',
   resolve: {
     extensions: ['.js', '.jsx'],
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      env: 'development',
+      filename,
+      template,
+    }),
+    new webpack.HotModuleReplacementPlugin(),
+  ],
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.(js|jsx|tsx|ts)$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
