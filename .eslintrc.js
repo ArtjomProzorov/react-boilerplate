@@ -37,5 +37,12 @@ module.exports = {
     'import/newline-after-import': ['error', { count: 1 }],
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
     'object-curly-newline': 'off',
+
+    'prettier/prettier': [
+      'error',
+      {
+        endOfLine: 'auto',
+      },
+    ],
   },
 }
